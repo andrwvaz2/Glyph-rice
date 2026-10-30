@@ -1,0 +1,33 @@
+# glyph: prompt de dos líneas con acento rojo
+add_newline = true
+format = """
+[╭─](#8C8C8C) $directory$git_branch$git_status$cmd_duration
+[╰─](#8C8C8C)$character """
+
+[directory]
+style = "bold white"
+truncation_length = 4
+truncation_symbol = "…/"
+home_symbol = " ~"
+read_only = " 󰌾"
+read_only_style = "red"
+format = "[$path]($style)[$read_only]($read_only_style) "
+
+[git_branch]
+symbol = " "
+style = "bold #8C8C8C"
+format = "[$symbol$branch]($style) "
+
+[git_status]
+style = "bold #D71921"
+format = "([$all_status$ahead_behind]($style) )"
+
+[cmd_duration]
+min_time = 2000
+style = "dimmed white"
+format = "[󱦟 $duration]($style) "
+
+[character]
+success_symbol = "[❯](#D71921)"
+error_symbol = "[❯](bold red)"
+vimcmd_symbol = "[❮](#D71921)"

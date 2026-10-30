@@ -1,0 +1,11 @@
+# личное: свои бинды hypr и фото наушников (buds/<устройство>.png, рендер с nothing.tech)
+config/hypr/user.lua
+config/quickshell/glyph/buds/*.png
+
+# Respaldos y temporales de seguridad
+*.bak
+*.clamshell-backup
+*.tmp
+*.log
+.env*
+*history*
